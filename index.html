@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#22d3ee"/>
+  <meta name="description" content="Eco Guard Technologies — Pipeline Security Monitoring System"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="EcoGuard"/>
+  <title>Eco Guard Technologies</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!--
+    Script load order matters:
+      1. data.js    — all global data, state, session helpers
+      2. audio.js   — audio engine & alarm modal (depends on state)
+      3. render.js  — all render functions (depends on state + audio)
+      4. events.js  — event binding & boot (depends on everything above)
+  -->
+  <script src="data.js"></script>
+  <script src="audio.js"></script>
+  <script src="render.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>
